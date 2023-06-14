@@ -1,0 +1,24 @@
+{
+  "apps": [
+    {
+		"name": "node",
+		"script": "./index.js",
+		"watch": true,
+		"autorestart":true,
+		"node_args": "--harmony",
+		"merge_logs": false,
+		"cwd": "./",
+		"instance": 1,
+		"exec_mode": "cluster",
+		"log_date_format": "yyyy-MM-DD HH:mZ",
+		"error_file":"./logs/app-err.log",
+		"out_file":"./logs/app-out.log",
+		"ignore_watch": [                           // 不用监听的文件
+		  "node_modules",
+		  "logs",
+		  "upload",
+		  "temp"
+		]
+    }
+  ]
+}
